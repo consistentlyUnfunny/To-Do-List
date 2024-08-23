@@ -93,3 +93,42 @@ ul li.task-item {
 ul li.task-item:hover #close-button{
   visibility: visible;
 }
+
+
+/* The hide default checkbox */
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+/* Create a custom checkbox */
+.custom-checkbox .checkmark {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: transparent;
+  border: 2px solid #b09407;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+/* Style the checkmark when the checkbox is checked */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: #b09407;
+}
+
+/* Optional: Add a checkmark indicator */
+.custom-checkbox .checkmark::after {
+  content: '✓';
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+  display: block;
+}
+
+
+
